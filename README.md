@@ -11,6 +11,8 @@ To run;
 <li><b>Hit F5</b></li>
 </ul>
 
+(disclaiming, whilst it can build in the dev. container, it may not run, X11 Display forwarding is needed!)
+
 This application demonstrates the following;
 
 <ul>

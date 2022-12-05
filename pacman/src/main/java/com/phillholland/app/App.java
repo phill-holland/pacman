@@ -21,7 +21,7 @@ public class App
         f.add(gp);
         f.pack();
         gp.init();
-        f.setSize(570,600 + 20);
+        f.setSize(570,600 + 60);
         f.setVisible(true);        
     }
 }

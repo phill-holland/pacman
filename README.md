@@ -1,7 +1,9 @@
 <b>Pacman</b>
 
-This application allows the compilation and execution
-of a simple Java Clone of Pacman.
+This application allows the compilation and execution of a simple Java Clone of Pacman.
+
+It is a resurrection of an old Java Applet codebase!
+
 To run;
 
 <ul>
@@ -23,13 +25,13 @@ Creating a new Maven project;
 mvn archetype:generate -DgroupId=com.phillholland.app -DartifactId=pacman -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 ```
 
-To Build;
+To Build (via terminal);
 
 ```
 mvn package
 ```
 
-To Run;
+To Run (via terminal);
 
 ```
 java -cp target/pacman-1.0-SNAPSHOT.jar com.phillholland.app.App

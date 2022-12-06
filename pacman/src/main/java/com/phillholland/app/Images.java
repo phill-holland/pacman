@@ -1,8 +1,6 @@
 package com.phillholland.app;
 
 import java.awt.image.*;
-import java.awt.*;
-import java.applet.*;
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;

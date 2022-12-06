@@ -4,27 +4,24 @@ This application allows the compilation and execution of a simple Java Clone of 
 
 It is a resurrection of an old Java Applet codebase!
 
-To run;
+Prerequisites;
 
-<ul>
-<li><b>Ensure project is open within the development container</b></li>
-<li><b>Hit F5</b></li>
-</ul>
+JDK Installed (Java)
+Apache Maven Installed
 
-(disclaiming, whilst it can build in the dev. container, it may not run, X11 Display forwarding is needed!)
-
-This application demonstrates the following;
-
-<ul>
-<li>VS code debugging and breakpoint functionality</li>
-<li>Docker development container configuration</li>
-<li>Maven Building</li>
-</ul>
-
-Creating a new Maven project;
+Ubuntu installation instructions for both;
 
 ```
-mvn archetype:generate -DgroupId=com.phillholland.app -DartifactId=pacman -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+wget https://download.java.net/java/GA/jdk13.0.1/cec27d702aa74d5a8630c65ae61e4305/9/GPL/openjdk-13.0.1_linux-x64_bin.tar.gz
+tar -xvf openjdk-13.0.1_linux-x64_bin.tar.gz
+sudo mv jdk-13.0.1 /opt/
+export JAVA_HOME=/opt/jdk-13.0.1
+export PATH=$JAVA_HOME/bin:$PATH
+wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+tar -xvf apache-maven-3.6.3-bin.tar.gz
+sudo mv apache-maven-3.6.3 /opt/
+export M2_HOME=/opt/apache-maven-3.6.3
+export PATH="$M2_HOME/bin:$PATH"
 ```
 
 To Build (via terminal);
@@ -37,6 +34,23 @@ To Run (via terminal);
 
 ```
 java -cp target/pacman-1.0-SNAPSHOT.jar com.phillholland.app.App
+```
+
+
+This application demonstrates the following;
+
+<ul>
+<li>Maven Building</li>
+</ul>
+
+Note!
+
+This project has a build container, but does not have X11 Display Forwarding, it will not run in the container.
+
+To Create a new Maven project (not required here);
+
+```
+mvn archetype:generate -DgroupId=com.phillholland.app -DartifactId=pacman -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 ```
 
 Requirements;
